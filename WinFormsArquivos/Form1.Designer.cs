@@ -51,6 +51,7 @@
             btnAbrirArquivo.TabIndex = 1;
             btnAbrirArquivo.Text = "Abrir Arquivo...";
             btnAbrirArquivo.UseVisualStyleBackColor = true;
+            btnAbrirArquivo.Click += btnAbrirArquivo_Click;
             // 
             // btnSalvarComo
             // 
