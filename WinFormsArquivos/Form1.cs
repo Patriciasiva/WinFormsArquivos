@@ -25,5 +25,26 @@ namespace WinFormsArquivos
 
             }
         }
+
+        private void btnSalvarComo_Click(object sender, EventArgs e)
+        {
+            //se o retorno do método ShowDialog () for Ok
+            if(saveFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                //declaração da variavel que vai salvar o arquivo
+                StreamWriter arq = new StreamWriter(saveFileDialog1.FileName);
+                //para cada linha do textBox 
+                foreach (string s in textBox1.Lines)
+                {
+                    //escreve uma linha no arquivo
+                    arq.WriteLine(s);
+                }
+                //fecha o arquivo
+                arq.Close();
+
+
+
+            }
+        }
     }
- }
+}
